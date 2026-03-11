@@ -6,14 +6,10 @@
 Simp :: #import "Simp";
 Texture :: Simp.Texture;
 
-width :: 1280;
-height :: 720;
-
-title :: "Jai Window";
-
 running := true;
 
 #load "player.jai";
+#load "constants.jai";
 
 player: Player;
 

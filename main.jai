@@ -1,4 +1,4 @@
-#load "word.jai";
+#load "world.jai";
 
 main :: () {
   game_window();

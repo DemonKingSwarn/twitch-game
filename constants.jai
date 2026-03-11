@@ -1,5 +1,4 @@
-size :: 50.0;
-speed := 50.0;
+width :: 1280;
+height :: 720;
+title :: "twitch game";
 
-
-player_image :: "assets/square.png";
