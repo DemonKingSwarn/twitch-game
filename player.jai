@@ -1,6 +1,6 @@
 #import "Math";
 
-player_speed := 50;
+player_speed := 90;
 player_size :: 50;
 player_image :: "assets/square.png";
 
@@ -23,7 +23,7 @@ draw_player :: () {
   Simp.immediate_flush();
 }
 
-move_player :: (player: *Player, delta_time: float, ev: Event) {
+move_player :: (player: *Player, dt: float, ev: Event) {
   if ev.type == .KEYBOARD {
     mul := ifx ev.key_pressed then 1.0 else 0.0;
     if ev.key_code == {
@@ -33,4 +33,7 @@ move_player :: (player: *Player, delta_time: float, ev: Event) {
       case #char "D"; player.velocity.x = player_speed * mul;
     }
   }
+
+  player.position.x += player.velocity.x * dt;
+  player.position.y += player.velocity.y * dt;
 }

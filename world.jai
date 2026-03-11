@@ -10,17 +10,9 @@ running := true;
 
 #load "player.jai";
 #load "constants.jai";
+#load "time.jai";
 
 player: Player;
-
-delta_time :: (last_time: *Apollo_Time) -> float {
-  current_time := current_time_monotonic();
-  duration := current_time - last_time.*;
-  dt := cast(float) to_float64_seconds(duration);
-  last_time.* = current_time;
-  
-  return dt;
-}
 
 game_window :: () {
   window := create_window(width, height, title);
@@ -38,9 +30,6 @@ game_window :: () {
         if it.type == .QUIT return;
         game_loop(it, dt);
       }
-      
-      player.position.x += player.velocity.x * dt;
-      player.position.y += player.velocity.y * dt;
       
       Simp.clear_render_target(0.1, 0.1,0.15, 1.0);
       draw_player(); 
