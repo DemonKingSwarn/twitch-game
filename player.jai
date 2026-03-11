@@ -1,7 +1,6 @@
 #import "Input";
 #import "Math";
 
-player_image :: "assets/square.png";
 
 #load "constants.jai";
 
