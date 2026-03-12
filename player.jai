@@ -1,6 +1,7 @@
 #import "Math";
 
 player_speed := 90;
+
 player_size :: 50;
 player_image :: "assets/square.png";
 

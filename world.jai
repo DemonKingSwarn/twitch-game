@@ -20,7 +20,7 @@ game_window :: () {
   
   last_time := current_time_monotonic();
   
-  while true {
+  while running {
       
       dt := delta_time(*last_time);
       

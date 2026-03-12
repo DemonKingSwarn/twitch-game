@@ -4,4 +4,3 @@ main :: () {
   game_window();
 }
 
-#run main();
