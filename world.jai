@@ -1,7 +1,6 @@
 #import "Basic";
 #import "Window_Creation";
 #import "Input";
-#import "System";
 
 Simp :: #import "Simp";
 Texture :: Simp.Texture;
